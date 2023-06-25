@@ -1,6 +1,7 @@
 "use client";
 import useLLM from "usellm";
 import { useState } from "react";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   const llm = useLLM();
@@ -43,6 +44,9 @@ export default function Home() {
   }
   return (
     <div className="min-h-screen mx-auto my-8 max-w-4xl">
+      <div>
+      <UserButton afterSignOutUrl="/"/>
+      </div>
       <h1 className="text-center mb-4 text-2xl">BingeToday!</h1>
       <div className="flex flex-col">
         <input
